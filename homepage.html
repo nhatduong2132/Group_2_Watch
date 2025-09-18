@@ -8,10 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="carousel.js"></script>
 </head>
 <body>
-    <div class="homepage">
+    <main class="homepage">
 
         <!-- Header -->
         <div class="header">
@@ -137,7 +138,7 @@
                             <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
                         </div>
                     </div>
-                    <h3 class="product-name">Black Metal Number</h3>
+                    <h3 class="product-name"><a href="#">Black Metal Number</a></h3>
                     <p class="product-price">$55.00</p>
                 </div>
 
@@ -154,7 +155,7 @@
                             <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
                         </div>
                     </div>
-                    <h3 class="product-name">Gold Dial Number</h3>
+                    <h3 class="product-name"><a href="#">Gold Dial Number</a></h3>
                     <p class="product-price">$45.00</p>
                 </div>
 
@@ -171,7 +172,7 @@
                             <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
                         </div>
                     </div>
-                    <h3 class="product-name">Multifunction Black Dial</h3>
+                    <h3 class="product-name"><a href="#">Multifunction Black Dial</a></h3>
                     <p class="product-price">$75.00</p>
                 </div>
                 
@@ -188,7 +189,7 @@
                             <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
                         </div>
                     </div>
-                    <h3 class="product-name">Multifunction Black Dial</h3>
+                    <h3 class="product-name"><a href="#">>Gold On Black Stainless Steel</a></h3>
                     <p class="product-price">$75.00</p>
                 </div>
 
@@ -205,7 +206,7 @@
                             <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
                         </div>
                     </div>
-                    <h3 class="product-name">Multifunction Black Dial</h3>
+                    <h3 class="product-name"><a href="#">Gold on Black Metal Numeral</a></h3>
                     <p class="product-price">$75.00</p>
                 </div>
 
@@ -222,7 +223,7 @@
                             <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
                         </div>
                     </div>
-                    <h3 class="product-name">Multifunction Black Dial</h3>
+                    <h3 class="product-name"><a href="#">Black Metal Bracelet Strap</a></h3>
                     <p class="product-price">$75.00</p>
                 </div>
             </div>
@@ -230,78 +231,240 @@
 
 
         <!-- Special Edition -->
-        <div class="special-edition">
+        <section class="special-edition">
             <!-- Thông tin sản phẩm -->
             <div class="product-info">
                 <h4 class="subtitle">A COMPANION FOR YA</h4>
                 <h2 class="title"><span class="highlight">SPECIAL</span> EDITION</h2>
                 <h3 class="product-name">BLACK & RED NUMERAL</h3>
+
                 <p class="price">$35.00</p>
                 <p class="description">
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                    Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+                    Experience the perfect blend of modern design and timeless elegance in every detail of this watch. 
+                    With a carefully crafted dial, durable strap, and bold styling, it delivers sophistication and confidence to the wearer. 
+                    An ideal choice for those who want to express their unique taste in any occasion.
                 </p>
+            </div>
+
+            <div class="product-navigation">
+                <button class="nav-btn prev-btn">&#10094;</button>
+                <button class="nav-btn next-btn">&#10095;</button>
             </div>
 
             <!-- Các hành động với sản phẩm -->
             <div class="product-actions">
                 <div class="quantity-cart">
                     <input type="number" value="1" min="1">
-                    <button class="btn-add">Add to Cart</button>
+                    <button class="btn-add">
+                    <img src="images/featuared/icons/cart.png" alt="Cart">ADD TO CART
+                    </button>
                 </div>
 
                 <div class="wishlist">
-                    <button class="btn-wishlist">Add to Wishlist</button>
-                    <button class="btn-added">Added</button>
+                    <button class="btn-wishlist">
+                        <img src="images/featuared/icons/heart.png" alt="wishlist">
+                    </button>
+                    <button id="compareBtn" class="btn-compare">
+                        ⇆ COMPARE
+                    </button>
                 </div>
 
                 <div class="meta">
-                    <p><strong>Categories:</strong> 3 In 1 Watches, Manly, Watches</p>
-                    <p><strong>Tags:</strong> 3 In 1 Watches, Classic, Modern</p>
+                    <p><strong>Categories:</strong> <span class="Tags">3 In 1 Watches</span>, <span class="Tags">Manly</span>, <span>Watches</span></p>
+                    <p><strong>Tags:</strong> <span>3 In 1 Watches</span>, <span>Classic</span>, <span>Modern</span></p>
                 </div>
 
                 <div class="share">
                     <span>Share:</span>
-                    <a href="#">Facebook</a>
-                    <a href="#">X</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Pinterest</a>
+                    <a href="#"><img src="images/featuared/icons/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/featuared/icons/X.png" alt="X"></a>
+                    <a href="#"><img src="images/featuared/icons/linkedin.png" alt="Linkedin"></a>
+                    <a href="#"><img src="images/featuared/icons/pinterest.png" alt="Pinterest"></a>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Highlights / Ads -->
-        <div class="highlights">
-            <div class="highlight-item"></div>
-            <div class="highlight-item"></div>
-            <div class="highlight-item"></div>
-        </div>
+        <section class="highlights">
+            <!-- 1 -->
+            <div class="highlight-item">
+                <div class="highlight-img">
+                    <img src="images/highlight/highlight_1.jpg" alt="Chronograph">
+                </div>
+                <h4>Chronograph 100M</h4>
+                <h3 class="highlight-text">Timers Villa</h3>
+            </div>
+
+            <!-- 2 -->
+            <div class="highlight-item">
+                <div class="highlight-img">
+                    <img src="images/highlight/highlight_2.jpg" alt="Men’s Maiden">
+                </div>
+                <h4>Men’s Maiden</h4>
+                <h3 class="highlight-text">A Friend of a Man</h3>
+            </div>
+
+            <!-- 3 -->
+            <div class="highlight-item">
+                <div class="highlight-img">
+                    <img src="images/highlight/highlight_3.jpg" alt="Thin Dial">
+                </div>
+                
+                <h4>Thin Dial</h4>
+                <h3 class="highlight-text">Complete Mechanical</h3>
+            </div>
+        </section>
 
         <!-- Choose a Dial -->
-        <div class="choose-dial">
-            <div class="dial-slider"></div>
-        </div>
+        <section class="choose-dial">
+            <!-- Tiêu đề -->
+            <div class="dial-info">
+                <h4 class="subtitle">A VARIETY OF 300+ COLLECTION</h4>
+                <h2 class="title"><span class="highlight">CHOOSE A</span> DIAL</h2>
+                <p class="description">
+                    This is the best in class effective watches from the luxury brand 
+                    watch.co and gizmo. Lot of efforts. Take a peek look into it
+                </p>
+            </div>
+
+            <!-- Slider đồng hồ -->
+            <div class="dial-slider">
+                <div class="dial-track">
+                    <div class="dial-item"><img src="images/dial/Clock-1.png" alt="Dial 1"></div>
+                    <div class="dial-item"><img src="images/dial/Clock-2.png" alt="Dial 2"></div>
+                    <div class="dial-item"><img src="images/dial/Clock-3.png" alt="Dial 3"></div>
+                    <div class="dial-item"><img src="images/dial/Clock-4.png" alt="Dial 4"></div>
+                    <div class="dial-item"><img src="images/dial/Clock-5.png" alt="Dial 5"></div>
+                    <div class="dial-item"><img src="images/dial/Clock-6.png" alt="Dial 6"></div>
+                    <div class="dial-item"><img src="images/dial/Clock-7.png" alt="Dial 7"></div>
+                </div>
+            </div>
+
+            <div class="dial-dots"></div>
+        </section>
 
         <!-- Blog Section -->
-        <div class="blog">
-            <h2>Our Blog</h2>
-            <div class="blog-list">
-            <div class="blog-item"></div>
-            <div class="blog-item"></div>
-            <div class="blog-item"></div>
+        <section class="blog">
+        <div class="blog-header">
+            <p class="subtitle">HAPPENINGS AROUND</p>
+            <h2 class="title">OUR <span>BLOG</span></h2>
+        </div>
+
+        <div class="blog-list">
+            <!-- Blog item 1 -->
+            <div class="blog-item">
+            <div class="blog-img">
+                <img src="images/blog/blog_1.jpg" alt="The Future of Luxury Timekeeping">
+            </div>
+            <div class="blog-content">
+                <p class="meta">Posted On April 16, 2025 / <i class="fa fa-comment"></i> 0 / <i class="fa fa-user"></i> developer</p>
+                <h3 class="blog-title">THE FUTURE OF LUXURY TIMEKEEPING</h3>
+                <p class="desc">All of the main reason to collect watches ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Proin tincidunt nunc lorem, nec faucibus mi facilisis eget. 
+                    Mauris laoreet, nisl id faucibus pellentesque, mi mi tempor enim, sit amet interdum felis nibh a leo.</p>
+                <p class="tags">business, Digital</p>
+                <a href="#" class="btn">READ MORE <i class="fa fa-arrow-right"></i></a>
+            </div>
+            </div>
+
+            <!-- Blog item 2 -->
+            <div class="blog-item">
+            <div class="blog-img">
+                <img src="images/blog/blog_2.jpg" alt="Gentlemen Prefer Digital">
+            </div>
+            <div class="blog-content">
+                <p class="meta">Posted On March 26, 2025 / <i class="fa fa-comment"></i> 0 / <i class="fa fa-user"></i> developer</p>
+                <h3 class="blog-title">GENTLEMEN PREFER DIGITAL</h3>
+                <p class="desc">The Most nisl id faucibus pellentesque, mi mi tempor enim, sit amet interdum felis nibh a leo.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Proin tincidunt nunc lorem, nec faucibus mi facilisis eget. Mauris laoreet.</p>
+                <p class="tags">business, Digital</p>
+                <a href="#" class="btn">READ MORE <i class="fa fa-arrow-right"></i></a>
+            </div>
+            </div>
+
+            <!-- Blog item 3 -->
+            <div class="blog-item">
+            <div class="blog-img">
+                <img src="images/blog/blog_3.jpg" alt="Double Tourbillon Watches">
+            </div>
+            <div class="blog-content">
+                <p class="meta">Posted On March 26, 2025 / <i class="fa fa-comment"></i> 0 / <i class="fa fa-user"></i> developer</p>
+                <h3 class="blog-title">DOUBLE TOURBILLON WATCHES</h3>
+                <p class="desc">Sit amet interdum felis nibh a leo.Mauris laoreet, 
+                    nisl id faucibus pellentesque, mi mi tempor enim, Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit. Proin tincidunt nunc lorem, nec faucibus mi facilisis eget</p>
+                <p class="tags">Analog, Creative</p>
+                <a href="#" class="btn">READ MORE <i class="fa fa-arrow-right"></i></a>
+            </div>
+            </div>
+        </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="images/footer/footer-logo.png" alt="Logo">
+        </div>
+        <div class="footer-top">
+            <div class="footer-col">
+            <h4>CONTACT US</h4>
+            <p><i class="fa fa-home"></i> 520, West valey, Anim ad minim,</p>
+            <p><i class="fa fa-phone"></i> +91 1234567890</p>
+            <p><i class="fa fa-envelope"></i> info@domainname.com</p>
+            </div>
+
+            <div class="footer-col">
+            <h4>SHARE WITH US</h4>
+            <p>Special offers on social networks</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/footer/icons/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="images/footer/icons/google.png" alt="google"></a>
+                <a href="#"><img src="images/footer/icons/instagram.png" alt="instagram"></a>
+                <a href="#"><img src="images/footer/icons/x.png" alt="twitter"></a>
+                
+            </div>
+            </div>
+
+            <div class="footer-col">
+            <h4>NEWSLETTER</h4>
+            <p>Subscribe our newsletter</p>
+            <form>
+                <input type="email" placeholder="Email Address">
+                <button type="submit"><i class="fa fa-envelope"></i></button>
+            </form>
+            </div>
+
+            <div class="footer-col">
+            <h4>#INSTAGRAM</h4>
+            <p>Our Instagram Gallery</p>
+            <div class="insta-gallery">
+                <img src="images/footer/gallery/gallery_1.jpg" alt="">
+                <img src="images/footer/gallery/gallery_2.jpg" alt="">
+                <img src="images/footer/gallery/gallery_3.jpg" alt="">
+                <img src="images/footer/gallery/gallery_4.jpg" alt="">
+                <img src="images/footer/gallery/gallery_5.jpg" alt="">
+                <img src="images/footer/gallery/gallery_6.jpg" alt="">
+            </div>
             </div>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="contact"></div>
-            <div class="share"></div>
-            <div class="newsletter"></div>
-            <div class="instagram"></div>
-            <div class="copyright"></div>
+        <div class="footer-quote">
+            Life is made up of two things Time and Love. Time is free but it is priceless.
+            You can’t own it but you can use it. You can’t keep it but you can spend it.
+            Once you have lost it you can never get it back. Love multiplies when you give it!
         </div>
 
-    </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025, Swiss Eagle Powered by Designthemes</p>
+            <div class="payment-icons">
+            <img src="images/footer/payment-img.png" alt="Payment">
+            </div>
+        </div>
+    </footer>
+
 
 
 </body>

@@ -302,20 +302,30 @@ a.btn {
 }
 
 
-
-/* Cột giữa chia đôi */
+/* Box giữa */
 .column.middle .box {
-    position: relative;
-    width: 100%;
-    height: 50%;     
+  position: relative;
+  height: 50%;
+  overflow: hidden;
+  background: #000; /* thêm nền đen để che hở */
 }
 
+/* Ảnh trong box giữa */
 .column.middle .box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 105%;   /* cho rộng hơn một chút để luôn tràn ra ngoài */
+  height: 105%;  /* cao hơn để che */
+  object-fit: cover;
+  display: block;
+  transform: scale(1);           /* trạng thái ban đầu */
+  transform-origin: center;      /* phóng từ giữa */
+  transition: transform 1s ease; /* hiệu ứng mượt */
 }
+
+/* Khi hover phóng to */
+.column.middle .box:hover img {
+  transform: scale(1.12);  /* tăng lên một chút so với trước */
+}
+
 
 /* Overlay phủ toàn bộ box, dùng flex căn giữa boxx */
 .column.middle .box .overlay {
@@ -595,6 +605,17 @@ a.btn {
   margin-top: 12px;
 }
 
+.product-name a {
+  text-decoration: none;
+  color: #000;                 /* màu chữ mặc định */
+  transition: color 0.3s ease;
+}
+
+.product-name a:hover {
+  color: #d8c29c;              /* đổi thành nâu be khi hover */
+}
+
+
 .product-price {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;   /* Light */
@@ -631,4 +652,872 @@ a.btn {
 
 .highlight{
     color: #d8c29c;
+}
+
+.special-edition {
+  display: flex;
+  flex-direction: column;       /* xếp nội dung theo cột */
+  justify-content: center;      /* căn giữa theo chiều dọc */
+  align-items: center;          /* căn giữa theo chiều ngang */
+  
+  min-height: 90vh;            /* chiếm full chiều cao màn hình */
+  text-align: center;           /* căn giữa text */
+  padding: 20px;                /* chống dính lề */
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+}
+
+/* Container chính phải relative để nút absolute căn theo */
+.special-edition {
+  position: relative;
+}
+
+/* Nút điều hướng */
+.product-navigation .nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;        /* mặc định trong suốt */
+  border: 2px solid #000;         /* viền đen */
+  color: #000;                    /* chữ đen */
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Hover đổi nền + chữ */
+.product-navigation .nav-btn:hover {
+  background: #d8c29c;   /* nền nâu be */
+  border-color: #d8c29c; /* viền nâu be */
+  color: #fff;           /* chữ trắng */
+  transform: translateY(-50%) scale(1.1);
+}
+
+.product-navigation .prev-btn {
+  left: 20px;   /* mũi tên bên trái */
+}
+
+.product-navigation .next-btn {
+  right: 20px;  /* mũi tên bên phải */
+}
+
+.product-info{
+  align-items: center;
+}
+
+.special-edition h2{
+  font-size: 54px;
+}
+
+.special-edition .subtitle::after {
+  content: "";
+  display: block;
+  width: 60px;               
+  height: 1px;               
+  background-color: #000;    
+  margin: 8px auto 10px;        
+}
+
+.special-edition .product-name{
+  font-family: 'Lato', 'san-serif';
+  font-size: 25px;
+}
+
+
+/* Phần thông tin */
+.product-info .subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-info .title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.product-info .highlight {
+  color: #d8c29c;  
+}
+
+.product-info .product-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.product-info .price {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.product-info .description {
+  max-width: 900px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  margin:30px;
+}
+
+/* Các hành động */
+/* Dùng chung font Montserrat cho toàn bộ product-actions */
+.product-actions,
+.product-actions button,
+.meta,
+.share,
+.tags {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Các hành động */
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Style chung cho button có icon */
+.product-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #d8c29c;
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Icon trong button */
+.product-actions button img {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  filter: brightness(0) invert(1);  /* ép icon thành màu trắng */
+}
+
+/* Hover chung cho tất cả button */
+.product-actions button:hover {
+  background: #bfa984;
+  transform: scale(0.97);
+}
+
+/* Add to Cart */
+.btn-add {
+  background: #d8c29c;
+}
+
+/* Wishlist & Compare */
+.wishlist {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-compare.added {
+  background: #d8c29c;  /* xanh khi Added */
+  color: #fff;
+}
+
+.meta{
+  font-weight: 400;
+  line-height: 35px;
+  margin-bottom: -30px;
+}
+
+/* Container */
+.quantity-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Quantity input */
+.quantity-cart input[type=number] {
+  -webkit-appearance: none; /* reset Chrome/Safari */
+  -moz-appearance: textfield; /* reset Firefox */
+  appearance: textfield;
+
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  background: #eee;          /* nền xám nhạt */
+  color: #000;
+  border-radius: 4px;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* --- Custom mũi tên (chỉ Chrome/Edge/Safari hỗ trợ) --- */
+.quantity-cart input[type=number]::-webkit-inner-spin-button,
+.quantity-cart input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: inner-spin-button;
+  opacity: 1;                       /* hiện lại */
+  background: #d8c29c;              /* nền be */
+  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  padding:2px;
+}
+
+/* Hover vào mũi tên */
+.quantity-cart input[type=number]::-webkit-inner-spin-button:hover,
+.quantity-cart input[type=number]::-webkit-outer-spin-button:hover {
+  background: #d8c29c;              /* đổi màu đậm hơn */
+  transform: scale(1.1);
+}
+
+/* Share section */
+.share {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.share span {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* Share icons nếu là <img> */
+.share a img {
+  width: 20px;       /* nhỏ vừa như mẫu */
+  height: 20px;
+  object-fit: contain;
+  filter: invert(64%) sepia(25%) saturate(240%) hue-rotate(5deg) brightness(95%) contrast(90%); /* màu nâu be #d8c29c */
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+
+.share a:hover img {
+  filter: brightness(0) saturate(100%);  /* chuyển icon thành màu đen */
+  transform: scale(1.1);
+}
+
+.product-info .subtitle{
+  font-size: 15px;
+  font-family: 'Montserrat', 'san-serif';
+}
+
+.product-info .title{
+  font-size: 54px;
+  font-family: 'Lato', 'san-serif';
+}
+
+/* Style cho Categories & Tags */
+p strong {
+  font-weight: 600;
+  margin-right: 6px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Các span trong tag/category */
+.Tags, 
+p span {
+  display: inline-block;
+  color: #333;               /* chữ mặc định */
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 3px 5px 3px 0;     /* khoảng cách giữa các nhãn */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Hover chỉ đổi màu chữ */
+.Tags:hover,
+p span:hover {
+  color: #d8c29c;   /* chữ nâu be */
+}
+
+/* Container 3 cột */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột đều nhau */
+  gap: 40px;                             /* khoảng cách giữa các cột */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.highlight-item {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.highlight-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+.highlight-item h4 {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.highlight-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Chữ highlight (màu nâu be) */
+.highlight-text {
+  color: #d8c29c;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover đổi màu */
+.highlight-text:hover {
+  color: #000;  /* ví dụ: đổi thành đen khi hover */
+}
+
+
+/* Container chính phải relative để nút absolute căn theo */
+.special-edition {
+  position: relative;
+}
+
+/* Chữ nâu be highlight */
+.highlight-text {
+  color: #d8c29c;             /* màu nâu be mặc định */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Khi hover đổi màu */
+.highlight-text:hover {
+  color: #d8c29c;                /* đổi thành đen */
+}
+
+/* Khung chứa ảnh */
+.highlight-item .highlight-img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;   /* giữ tỷ lệ khung ảnh */
+  width: 100%;
+}
+
+/* Ảnh */
+.highlight-item .highlight-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* lấp đầy khung mà không méo */
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Hover zoom trong khung ảnh */
+.highlight-item .highlight-img:hover img {
+  transform: scale(1.1);
+}
+
+/* Text bên dưới vẫn hiển thị bình thường */
+.highlight-item h4,
+.highlight-item .highlight-text {
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.choose-dial  {
+  display: flex;
+  flex-direction: column;       /* xếp nội dung theo cột */
+  justify-content: center;      /* căn giữa theo chiều dọc */
+  align-items: center;          /* căn giữa theo chiều ngang */
+  
+  min-height:60.3vh;            /* chiếm full chiều cao màn hình */
+  text-align: center;           /* căn giữa text */
+  padding: 20px;                /* chống dính lề */
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+}
+
+.choose-dial .dial-info .subtitle {
+  font-size: 15px;
+  color: black;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.choose-dial .dial-info .title {
+  font-size: 54px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.choose-dial .dial-info .description {
+  font-size: 16px;
+  color: black;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+
+.dial-item img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.dial-item img:hover {
+  transform: scale(1.1);
+}
+
+.product-navigation {
+  margin-top: 30px;
+}
+
+.choose-dial .dial-info .subtitle {
+  font-size: 15px;
+}
+
+.choose-dial .dial-info .title {
+  font-size: 54px;
+}
+
+.choose-dial .dial-info .description{
+  font-family: 'Montserrat', 'san-serif';
+}
+
+.choose-dial .dial-info .subtitle::after {
+  content: "";
+  display: block;
+  width: 60px;               
+  height: 1px;               
+  background-color: #000;    
+  margin: 8px auto 10px;        
+}
+
+.choose-dial {
+  text-align: center;
+  overflow: hidden;
+  height:602.31px;
+}
+
+.dial-slider {
+  position: relative;
+  overflow: hidden;   /* che dial thừa */
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.dial-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 12px; /* khoảng cách giữa các item */
+}
+
+
+.dial-item {
+  flex: 0 0 calc((100% - (12px * (6 - 1))) / 6); 
+  /* 6 item + 5 khoảng cách */
+  box-sizing: border-box;
+}
+
+.dial-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* DOTS */
+.dial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+.dial-dots .dial-dot {
+  width: 12px;
+  height: 12px;
+  background: #cfcfcf;
+  border: 0;
+  cursor: pointer;
+}
+.dial-dots .dial-dot.active {
+  background: #d8c29c;
+}
+
+/* ==== CHOOSE DIAL — FIX CHỈ HIỆN 6 ==== */
+.choose-dial .dial-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px; /* chừa lề 2 bên để không bị cắt */
+}
+
+.choose-dial .dial-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px; /* giãn cách giữa các đồng hồ */
+  transition: transform 0.5s ease;
+  margin-top:30px;
+  margin-bottom: 50px;
+}
+
+.choose-dial .dial-item {
+  flex: 0 0 calc((100% - (20px * 5)) / 6); /* 6 item + 5 gap */
+  box-sizing: border-box;
+}
+
+.choose-dial .dial-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 125px; /* giới hạn đồng hồ nhỏ lại như mẫu */
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.choose-dial .dial-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Chống hover bị cắt */
+.choose-dial .dial-slider::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 10px;             /* che mép phải */
+  background: #FAFAFA;     /* cùng màu nền */
+  pointer-events: none;
+}
+
+.choose-dial .dial-info .title{
+  font-family: 'Montserrat','san-serif';
+}
+
+.blog {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.blog-header .subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.blog-header .title {
+  font-size: 42px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.blog-header .title span {
+  color: #d8c29c; /* nâu be */
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-item {
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.blog-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.blog-item:hover .blog-img img {
+  transform: scale(1.05);
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content .meta {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.blog-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.blog-content .desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.blog-content .tags {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.blog-content .btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 2px solid #d8c29c;
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.blog-content .btn:hover {
+  background: #d8c29c;
+  color: #fff;
+}
+
+.blog-header .subtitle {
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.blog-header .title {
+  font-size: 54px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.blog-header .subtitle::after {
+  content: "";
+  display: block;
+  width: 60px;               
+  height: 1px;               
+  background-color: #000;    
+  margin: 8px auto 10px;  
+}
+
+.desc{
+  font-family: 'Montserrat';
+}
+
+.blog-title{
+  font-family: 'Montserrat';
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-item {
+  background: #fff;
+  display: flex;
+  flex-direction: column; /* Cho phép chia trên - dưới */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.blog-content {
+  flex: 1; /* chiếm hết khoảng trống còn lại */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* đẩy nút xuống dưới */
+  padding: 20px;
+}
+
+.blog-content .btn {
+  align-self: flex-start; /* nút dính về trái */
+  margin-top: auto;       /* đẩy nút xuống đáy */
+}
+
+.footer {
+  background: #fff;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #bfa984; /* nâu be */
+}
+
+.footer-col p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  color: #000;
+  transition: all .3s ease;
+}
+.social-icons a:hover {
+  background: #d8c29c;
+  color: #fff;
+}
+
+.footer-col form {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #000;
+  margin-top: 10px;
+}
+.footer-col input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  flex: 1;
+}
+.footer-col button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.insta-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+}
+.insta-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.footer-quote {
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-bottom {
+  background: #000;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-bottom p {
+  margin: 0;
+  font-size: 13px;
+}
+.payment-icons img {
+  height: 25px;
+  margin-left: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d8c29c; /* viền */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons i,
+.social-icons img {
+  font-size: 18px;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.social-icons a:hover {
+  background: #d8c29c;
+  color: #fff;
 }
