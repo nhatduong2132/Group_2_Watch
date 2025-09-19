@@ -17,11 +17,18 @@ body {
   color: #333;
 }
 h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
-p, a, span {
+span {
   font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.highlight{
+  font-weight: 700;
+}
+
+p{
   font-weight: 400;
 }
 
@@ -1124,9 +1131,6 @@ p span:hover {
   font-size: 15px;
 }
 
-.choose-dial .dial-info .title {
-  font-size: 54px;
-}
 
 .choose-dial .dial-info .description{
   font-family: 'Montserrat', 'san-serif';
@@ -1241,7 +1245,7 @@ p span:hover {
 }
 
 .choose-dial .dial-info .title{
-  font-family: 'Montserrat','san-serif';
+  font-family: 'Lato','san-serif';
 }
 
 .blog {
@@ -1536,95 +1540,3 @@ p span:hover {
   color: #fff;
 }
 
-/*Header */
-.top-header {
-  background: #fff;
-  padding: 10px 20px;
-  font-family: 'Montserrat';
-}
-
-.top-header .container {
-  max-width: 1500px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* logo trái - icons phải */
-  height: 88px;
-}
-
-.top-header .logo img {
-  max-height: 40px;  /* chỉnh kích thước logo */
-}
-
-.header-icons a {
-  margin-left: 20px;
-  display: inline-block;
-  position: relative;
-}
-
-.header-icons img {
-  width: 22px;   /* chỉnh icon vừa phải */
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.header-icons a:hover img {
-  transform: scale(1.1); /* hiệu ứng hover */
-  color: #d8c29c;
-}
-
-/* Badge số giỏ hàng */
-.cart-count {
-  position: absolute;
-  top: 14px;       /* hạ xuống sát icon */
-  right: -3px;     /* dịch vào trong thay vì ra ngoài */
-  background: #000;
-  color: #fff;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 2px 5px;
-  border-radius: 50%;
-  line-height: 1; /* tránh bị cao quá */
-}
-
-
-.header-icons {
-  display: flex;
-  align-items: center;
-}
-
-.header-icons .icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border-left: 1px solid rgba(0,0,0,0.1);
-  box-sizing: border-box;
-}
-
-
-.header-icons img {
-  width: 22px;
-  height: 22px;              /* icon luôn vuông */
-  object-fit: contain;       /* không méo hình */
-  display: block;
-}
-
-.cart-total {
-  font-size: 16px;
-  font-weight: 500;
-  margin-left: 15px;
-  color: #000;
-  align-self: center;
-}
-
-.header-icons .icon img {
-  width: 75%;           /* icon chiếm 60% ô, luôn cân */
-  height: 75%;
-  object-fit: contain;  /* giữ tỷ lệ */
-  display: block;
-  padding-left: 18px;
-}

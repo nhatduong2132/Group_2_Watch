@@ -1,0 +1,169 @@
+/* ========== FOOTER ========== */
+.footer {
+  background: #fff;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+/* Top section */
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #bfa984; /* nâu be */
+}
+
+.footer-col p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d8c29c; /* viền */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons i,
+.social-icons img {
+  font-size: 18px;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.social-icons a:hover {
+  background: #d8c29c;
+  color: #fff;
+}
+
+/* Newsletter */
+.footer-col form {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #000;
+  margin-top: 10px;
+}
+
+.footer-col input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  flex: 1;
+}
+
+.footer-col button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Instagram gallery */
+.insta-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+}
+
+.insta-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+/* Quote */
+.footer-quote {
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Bottom section */
+.footer-bottom {
+  background: #000;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.payment-icons img {
+  height: 25px;
+  margin-left: 10px;
+}
+
+/* Newsletter form */
+.newsletter-form .newsletter-input {
+  display: flex;               /* input + button cùng 1 dòng */
+  align-items: center;         
+  max-width: 250px;            /* giới hạn chiều rộng */
+  margin-top: 10px;
+}
+
+.newsletter-form input {
+  flex: 1;                     /* chiếm hết chỗ trống */
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background: transparent;      /* nền trong suốt */
+}
+
+.newsletter-form button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.newsletter-form button img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0); /* icon đen mặc định */
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover đổi màu icon */
+.newsletter-form button:hover img {
+  filter: invert(64%) sepia(25%) saturate(240%) hue-rotate(5deg) brightness(95%) contrast(90%); /* nâu be */
+  transform: scale(1.1);
+}

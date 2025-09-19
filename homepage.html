@@ -7,7 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="css/header-top.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/homepage.css">
 </head>
 <body>
     <main class="homepage">
@@ -27,15 +29,45 @@
                     <a href="#" class="icon">
                         <img src="images/header/customer.png" alt="User">
                     </a>
-                    <a href="#" class="icon cart">
+
+                    <!-- Cart with dropdown -->
+                    <!-- Cart icon -->
+                    <div class="icon cart">
                         <img src="images/header/cart.png" alt="Cart">
                         <span class="cart-count">0</span>
-                    </a>
+                    </div>
                     <span class="cart-total">$0.00</span>
-                </div>
 
+                    <!-- Dropdown cart (đưa ra ngoài .icon.cart) -->
+                    <div class="cart-dropdown">
+                        <ul class="cart-items">
+                            <li class="cart-item">
+                            <div class="item-thumb">
+                                <img src="images/featured/1-1.jpg" alt="Gold Dial Number">
+                            </div>
+                            <div class="item-info">
+                                <p class="item-name">Gold Dial Number</p>
+                                <p class="item-qty">1 × $45.00</p>
+                            </div>
+                            <button class="remove">×</button>
+                            </li>
+
+                        </ul>
+
+                        <div class="cart-subtotal">
+                            <span>Subtotal:</span>
+                            <strong>$45.00</strong>
+                        </div>
+
+                        <div class="cart-actions">
+                            <a href="cart.html" class="btn">View Cart</a>
+                            <a href="checkout.html" class="btn">Checkout</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
+
 
 
         <!-- Hero Section -->
@@ -141,108 +173,8 @@
                 <h2><span class="highlight">FEATURED</span> PRODUCTS</h2>
             </div>
 
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product">
-                    <div class="product-img">
-                        <img src="images/featuared/1-1.jpg" alt="Black Metal Number" class="img-front">
-                        <img src="images/featuared/1-2.jpg" alt="Back" class="img-back">
-                        <div class="overlay"></div>
-                        <div class="overlay-icons">
-                            <a href="#"><img src="images/featuared/icons/cart.png" alt="Add to Cart"></a>
-                            <a href="#"><img src="images/featuared/icons/heart.png" alt="Wishlist"></a>
-                            <a href="#"><img src="images/featuared/icons/analysis.png" alt="Search"></a>
-                            <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
-                        </div>
-                    </div>
-                    <h3 class="product-name"><a href="#">Black Metal Number</a></h3>
-                    <p class="product-price">$55.00</p>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product">
-                    <div class="product-img">
-                        <img src="images/featuared/2-1.jpg" alt="Gold Dial Number" class="img-front">
-                        <img src="images/featuared/2-2.jpg" alt="Back" class="img-back">
-                        <div class="overlay"></div>
-                        <div class="overlay-icons">
-                            <a href="#"><img src="images/featuared/icons/cart.png" alt="Add to Cart"></a>
-                            <a href="#"><img src="images/featuared/icons/heart.png" alt="Wishlist"></a>
-                            <a href="#"><img src="images/featuared/icons/analysis.png" alt="Search"></a>
-                            <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
-                        </div>
-                    </div>
-                    <h3 class="product-name"><a href="#">Gold Dial Number</a></h3>
-                    <p class="product-price">$45.00</p>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product">
-                    <div class="product-img">
-                        <img src="images/featuared/3-1.jpg" alt="Multifunction Black Dial" class="img-front">
-                        <img src="images/featuared/3-2.jpg" alt="Back" class="img-back">
-                        <div class="overlay"></div>
-                        <div class="overlay-icons">
-                            <a href="#"><img src="images/featuared/icons/cart.png" alt="Add to Cart"></a>
-                            <a href="#"><img src="images/featuared/icons/heart.png" alt="Wishlist"></a>
-                            <a href="#"><img src="images/featuared/icons/analysis.png" alt="Search"></a>
-                            <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
-                        </div>
-                    </div>
-                    <h3 class="product-name"><a href="#">Multifunction Black Dial</a></h3>
-                    <p class="product-price">$75.00</p>
-                </div>
+            <div class="product-grid" id="productGrid">
                 
-                <!-- Product 4 -->
-                <div class="product">
-                    <div class="product-img">
-                        <img src="images/featuared/4-1.jpg" alt="Multifunction Black Dial" class="img-front">
-                        <img src="images/featuared/4-2.jpg" alt="Back" class="img-back">
-                        <div class="overlay"></div>
-                        <div class="overlay-icons">
-                            <a href="#"><img src="images/featuared/icons/cart.png" alt="Add to Cart"></a>
-                            <a href="#"><img src="images/featuared/icons/heart.png" alt="Wishlist"></a>
-                            <a href="#"><img src="images/featuared/icons/analysis.png" alt="Search"></a>
-                            <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
-                        </div>
-                    </div>
-                    <h3 class="product-name"><a href="#">Gold On Black Stainless Steel</a></h3>
-                    <p class="product-price">$75.00</p>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="product">
-                    <div class="product-img">
-                        <img src="images/featuared/5-1.jpg" alt="Multifunction Black Dial" class="img-front">
-                        <img src="images/featuared/5-2.jpg" alt="Back" class="img-back">
-                        <div class="overlay"></div>
-                        <div class="overlay-icons">
-                            <a href="#"><img src="images/featuared/icons/cart.png" alt="Add to Cart"></a>
-                            <a href="#"><img src="images/featuared/icons/heart.png" alt="Wishlist"></a>
-                            <a href="#"><img src="images/featuared/icons/analysis.png" alt="Search"></a>
-                            <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
-                        </div>
-                    </div>
-                    <h3 class="product-name"><a href="#">Gold on Black Metal Numeral</a></h3>
-                    <p class="product-price">$75.00</p>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="product">
-                    <div class="product-img">
-                        <img src="images/featuared/6-1.jpg" alt="Multifunction Black Dial" class="img-front">
-                        <img src="images/featuared/6-2.jpg" alt="Back" class="img-back">
-                        <div class="overlay"></div>
-                        <div class="overlay-icons">
-                            <a href="#"><img src="images/featuared/icons/cart.png" alt="Add to Cart"></a>
-                            <a href="#"><img src="images/featuared/icons/heart.png" alt="Wishlist"></a>
-                            <a href="#"><img src="images/featuared/icons/analysis.png" alt="Search"></a>
-                            <a href="#"><img src="images/featuared/icons/eyes.svg" alt="View"></a>
-                        </div>
-                    </div>
-                    <h3 class="product-name"><a href="#">Black Metal Bracelet Strap</a></h3>
-                    <p class="product-price">$75.00</p>
-                </div>
             </div>
         </section>
 
@@ -255,7 +187,7 @@
                 <h2 class="title"><span class="highlight">SPECIAL</span> EDITION</h2>
                 <h3 class="product-name">BLACK & RED NUMERAL</h3>
 
-                <p class="price">$35.00</p>
+                <p class="price">$105.00</p>
                 <p class="description">
                     Experience the perfect blend of modern design and timeless elegance in every detail of this watch. 
                     With a carefully crafted dial, durable strap, and bold styling, it delivers sophistication and confidence to the wearer. 
@@ -273,13 +205,13 @@
                 <div class="quantity-cart">
                     <input type="number" value="1" min="1">
                     <button class="btn-add">
-                    <img src="images/featuared/icons/cart.png" alt="Cart">ADD TO CART
+                    <img src="images/featured/icons/cart.png" alt="Cart">ADD TO CART
                     </button>
                 </div>
 
                 <div class="wishlist">
                     <button class="btn-wishlist">
-                        <img src="images/featuared/icons/heart.png" alt="wishlist">
+                        <img src="images/featured/icons/heart.png" alt="wishlist">
                     </button>
                     <button id="compareBtn" class="btn-compare">
                         ⇆ COMPARE
@@ -293,10 +225,10 @@
 
                 <div class="share">
                     <span>Share:</span>
-                    <a href="#"><img src="images/featuared/icons/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="images/featuared/icons/X.png" alt="X"></a>
-                    <a href="#"><img src="images/featuared/icons/linkedin.png" alt="Linkedin"></a>
-                    <a href="#"><img src="images/featuared/icons/pinterest.png" alt="Pinterest"></a>
+                    <a href="#"><img src="images/featured/icons/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/featured/icons/X.png" alt="X"></a>
+                    <a href="#"><img src="images/featured/icons/linkedin.png" alt="Linkedin"></a>
+                    <a href="#"><img src="images/featured/icons/pinterest.png" alt="Pinterest"></a>
                 </div>
             </div>
         </section>
@@ -364,7 +296,7 @@
         <section class="blog">
         <div class="blog-header">
             <p class="subtitle">HAPPENINGS AROUND</p>
-            <h2 class="title">OUR <span>BLOG</span></h2>
+            <h2 class="title">OUR <span class="highlight">BLOG</span></h2>
         </div>
 
         <div class="blog-list">
@@ -448,9 +380,14 @@
             <div class="footer-col">
             <h4>NEWSLETTER</h4>
             <p>Subscribe our newsletter</p>
-            <form>
-                <input type="email" placeholder="Email Address">
-                <button type="submit"><i class="fa fa-envelope"></i></button>
+            <form class="newsletter-form">
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Email Address" required>
+                    <!-- Nút submit với icon -->
+                    <button type="submit">
+                    <img src="images/footer/icons/mail.png" alt="Subscribe">
+                    </button>
+                </div>
             </form>
             </div>
 
@@ -483,8 +420,12 @@
     </footer>
 
 
-    <script src="carousel.js"></script>
-    <script src="cart.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/homepage.js"></script>
+    <script src="js/cart.js"></script>
+
+
 
 
 </body>

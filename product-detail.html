@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header-top.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    
+    
+
+</head>
+<body>
+    <header class="top-header">
+            <div class="container">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="images/header/Swiss-Logo.png" alt="Swiss Eagle">
+                </div>
+
+                <!-- Menu icons -->
+                <div class="header-icons">
+                    <a href="#" class="icon">
+                        <img src="images/header/search.png" alt="Search">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="images/header/customer.png" alt="User">
+                    </a>
+
+                    <!-- Cart with dropdown -->
+                    <!-- Cart icon -->
+                    <div class="icon cart">
+                        <img src="images/header/cart.png" alt="Cart">
+                        <span class="cart-count">0</span>
+                    </div>
+                    <span class="cart-total">$0.00</span>
+
+                    <!-- Dropdown cart (đưa ra ngoài .icon.cart) -->
+                    <div class="cart-dropdown">
+                        <ul class="cart-items">
+                            <li class="cart-item">
+                            <div class="item-thumb">
+                                <img src="images/featured/1-1.jpg" alt="Gold Dial Number">
+                            </div>
+                            <div class="item-info">
+                                <p class="item-name">Gold Dial Number</p>
+                                <p class="item-qty">1 × $45.00</p>
+                            </div>
+                            <button class="remove">×</button>
+                            </li>
+
+                        </ul>
+
+                        <div class="cart-subtotal">
+                            <span>Subtotal:</span>
+                            <strong>$45.00</strong>
+                        </div>
+
+                        <div class="cart-actions">
+                            <a href="cart.html" class="btn">View Cart</a>
+                            <a href="checkout.html" class="btn">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1 class="page-title">SHOP</h1>
+        <nav class="breadcrumb">
+            <a href="homepage.html">Home</a>
+            <span class="separator">/</span>
+            <span id="categoryName">Category</span>
+            <span class="separator">/</span>
+            <span id="productName">Product</span>
+        </nav>
+    </div>
+    <main class="product-detail">
+
+        <!-- Product Info -->
+        <section class="product-main">
+            <div class="product-images">
+                <div class="main-image">
+                <img id="mainImage" src="" alt="">
+                </div>
+                <div class="thumbs" id="thumbs">
+                <!-- Ảnh nhỏ sẽ add bằng JS -->
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h2 id="detailName">Product Name</h2>
+                <p class="price" id="detailPrice">$0.00</p>
+                <p class="description" id="detailDesc">Description...</p>
+
+                <div class="product-actions">
+                    <div class="quantity-cart">
+                        <input type="number" value="1" min="1" id="qty">
+                        <button class="btn-add"><img src="images/featured/icons/cart.png">ADD TO CART</button>
+                    </div>
+                    <div class="wishlist">
+                        <button class="btn-wishlist"><img src="images/featured/icons/heart.png" alt="wishlist">ADD TO WISHLIST</button>
+                        <button class="btn-compare">⇆ COMPARE</button>
+                    </div>
+                </div>
+                
+                <p><strong>Categories:</strong> <span class="cats" id="detailCategory"></span></p>
+                <p><strong>Tags:</strong> <span class="tags" id="detailTags"></span></p>
+
+                <div class="share">
+                    <p><strong>Share:</strong></p>
+                    <a href="#"><img src="images/featured/icons/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/featured/icons/X.png" alt="X"></a>
+                    <a href="#"><img src="images/featured/icons/linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="images/featured/icons/pinterest.png" alt="Pinterest"></a>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <!-- Tabs -->
+        <section class="product-tabs">
+            <ul class="tabs">
+                <li class="active" data-tab="desc">DESCRIPTION</li>
+                <li data-tab="info">ADDITIONAL INFORMATION</li>
+                <li data-tab="reviews">REVIEWS (0)</li>
+            </ul>
+
+            <div class="tab-content active" id="desc">
+                <p id="tabDesc"></p>
+            </div>
+            <div class="tab-content" id="info">
+                <table>
+                    <tr><td>Weight</td><td>60 lbs</td></tr>
+                    <tr><td>Dimensions</td><td>63 × 68 × 78 in</td></tr>
+                    <tr><td>Color</td><td>Black</td></tr>
+                </table>
+            </div>
+            <div class="tab-content" id="reviews">
+            <form class="review-form">
+                <p><strong>Be the first to review “Gold Dial Number”</strong></p>
+                <p>Your email address will not be published.<br> Required fields are marked <span style="color:red">*</span></p>
+                
+                <label>Your rating:</label>
+
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+                
+                <label for="review">Your review <span style="color:red">*</span></label>
+                <textarea id="review" placeholder="Write your review..." required></textarea>
+                
+                <div class="input-row">
+                    <div>
+                        <label for="name">Name <span style="color:red">*</span></label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email <span style="color:red">*</span></label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                
+                <p>
+                    <input type="checkbox" id="save-info">
+                    <label for="save-info">Save my name, email, and website in this browser for the next time I comment.</label>
+                </p>
+                
+                <button type="submit">SUBMIT</button>
+            </form>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="related">
+            <h2 class="related-title">RELATED PRODUCTS</h2>
+            <div class="product-grid" id="relatedProducts"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="images/footer/footer-logo.png" alt="Logo">
+        </div>
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>CONTACT US</h4>
+                <p><i class="fa fa-home"></i> 520, West valey, Anim ad minim,</p>
+                <p><i class="fa fa-phone"></i> +91 1234567890</p>
+                <p><i class="fa fa-envelope"></i> info@domainname.com</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>SHARE WITH US</h4>
+                <p>Special offers on social networks</p>
+                <div class="social-icons">
+                    <a href="#"><img src="images/footer/icons/facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="images/footer/icons/google.png" alt="google"></a>
+                    <a href="#"><img src="images/footer/icons/instagram.png" alt="instagram"></a>
+                    <a href="#"><img src="images/footer/icons/x.png" alt="twitter"></a>
+                    
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>NEWSLETTER</h4>
+                <p>Subscribe our newsletter</p>
+                <form class="newsletter-form">
+                    <div class="newsletter-input">
+                        <input type="email" placeholder="Email Address" required>
+                        <!-- Nút submit với icon -->
+                        <button type="submit">
+                        <img src="images/footer/icons/mail.png" alt="Subscribe">
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="footer-col">
+                <h4>#INSTAGRAM</h4>
+                <p>Our Instagram Gallery</p>
+                <div class="insta-gallery">
+                    <img src="images/footer/gallery/gallery_1.jpg" alt="">
+                    <img src="images/footer/gallery/gallery_2.jpg" alt="">
+                    <img src="images/footer/gallery/gallery_3.jpg" alt="">
+                    <img src="images/footer/gallery/gallery_4.jpg" alt="">
+                    <img src="images/footer/gallery/gallery_5.jpg" alt="">
+                    <img src="images/footer/gallery/gallery_6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-quote">
+            Life is made up of two things Time and Love. Time is free but it is priceless.
+            You can’t own it but you can use it. You can’t keep it but you can spend it.
+            Once you have lost it you can never get it back. Love multiplies when you give it!
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © 2025, Swiss Eagle Powered by Designthemes</p>
+            <div class="payment-icons">
+                <img src="images/footer/payment-img.png" alt="Payment">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/product-detail.js"></script>
+    <script src="js/cart.js"></script>
+
+ 
+</body>
+</html>

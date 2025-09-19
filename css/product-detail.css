@@ -1,0 +1,500 @@
+/* ================= PRODUCT DETAIL PAGE ================== */
+
+/* Khung chính */
+.product-detail {
+  width: 100%;        
+  max-width: 1230px;  
+  margin: 0 auto;     
+}
+
+/* Khối product-main (ảnh + info) */
+.product-detail .product-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;              /* thay vì 60px + margin-left -30px */
+  justify-content: flex-start;
+}
+
+/* --- Cột trái: Gallery --- */
+.product-detail .product-images {
+  flex: 0 0 431px;
+  max-width: 431px;
+}
+
+.product-detail .product-images .main-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #eee;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Thumbnails */
+.product-detail .thumbs {
+  display: flex;
+  gap: 10px;
+}
+
+.product-detail .thumbs img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.product-detail .thumbs img:hover {
+  transform: scale(1.05);
+  border-color: #d8c29c;
+}
+
+/* --- Cột phải: Thông tin sản phẩm --- */
+.product-detail .product-info {
+  flex: 1;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.product-detail .product-info h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.product-detail .product-info .product-price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #d8c29c;
+  margin-bottom: 15px;
+}
+
+.product-detail .product-info .description {
+  max-width: 700px;
+  margin: 0 0 24px 0;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  font-weight: 400;
+}
+
+/* --- Actions --- */
+.product-detail .product-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.product-detail .quantity-cart {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-detail .quantity-cart input[type=number] {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.product-detail .btn-add {
+  background: #d8c29c;
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-detail .btn-add:hover {
+  background: #bfa984;
+}
+
+.product-detail .wishlist-compare {
+  display: flex;
+  gap: 10px;
+}
+
+.product-detail .wishlist-compare button {
+  background: #eee;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-detail .wishlist-compare button:hover {
+  background: #d8c29c;
+  color: #fff;
+}
+
+/* --- Meta & Share --- */
+.product-detail .meta {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.product-detail .meta strong {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 6px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.product-detail .meta span {
+  font-size: 16px !important;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+.product-detail .tags {
+  margin-top: 20px;
+}
+
+.product-detail .share {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-detail .share span {
+  font-weight: 600;
+}
+
+.product-detail .share a img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.product-detail .share a:hover img {
+  transform: scale(1.1);
+}
+
+/* Tabs */
+.product-detail .product-tabs {
+  margin-top: 40px;
+  text-align: left;
+}
+
+/* Related */
+.product-detail .related {
+  margin-top: 60px;
+  text-align: left;
+}
+
+.product-detail .related h2 {
+  font-size: 19.67px;
+}
+
+.product-detail .related .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 0;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.product-detail .related .product {
+  margin: 0;
+  padding: 0;
+}
+
+.meta strong {
+  font-size: 16px;   /* to hơn */
+  font-weight: 600;
+  margin-right: 6px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.meta span {
+  font-size: 16px !important;   /* nhỏ hơn */
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+.product-info .price{
+    font-weight: 400;
+}
+
+.product-info{
+    margin-top: 40px;
+}
+
+.product-main{
+    margin-top:70px;
+}
+
+
+/* Danh sách tabs */
+.product-tabs .tabs {
+  display: flex;
+  gap: 50px;                 /* khoảng cách giữa các tab */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Từng tab */
+.product-tabs .tabs li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #777;
+  cursor: pointer;
+  padding: 12px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover */
+.product-tabs .tabs li:hover {
+  color: #000;
+}
+
+/* Tab active */
+.product-tabs .tabs li.active {
+  color: #000;
+}
+
+/* Line dưới tab active */
+.product-tabs .tabs li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #bfa984; /* nâu be */
+}
+
+/* Nội dung tab */
+.product-tabs .tab-content {
+  display: none;
+  padding: 30px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Chỉ hiển thị tab đang active */
+.product-tabs .tab-content.active {
+  display: block;
+}
+
+/* Style cho bảng trong Additional Info */
+.product-tabs table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.product-tabs table td {
+  padding: 15px;
+  border: 3px solid #eee;
+}
+
+.product-tabs table td:first-child {
+  font-weight: 600;
+  width: 200px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.review-form {
+  max-width: 1230px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Tiêu đề form */
+.review-form p strong {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Label chung */
+.review-form label,
+.input-row label {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Stars */
+.review-form .stars {
+  font-size: 20px;
+  color: #d8c29c;
+  margin-bottom: 15px;
+}
+
+/* Input + Textarea chung */
+.review-form input,
+.review-form textarea {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+/* Textarea riêng */
+.review-form textarea {
+  width: 100%;
+  min-height: 120px;
+  margin-bottom: 20px;
+}
+
+/* Checkbox + label cùng hàng */
+.review-form p input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  vertical-align: middle;
+}
+
+.review-form p label {
+  display: inline;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Submit button */
+.review-form button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #d8c29c;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.review-form button:hover {
+  background: #bfa984;
+}
+
+/* Hàng chứa Name và Email */
+.input-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.input-row > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+  outline: none;                /* bỏ viền đen mặc định */
+  border-color: #d8c29c;        /* đổi màu viền khi focus */
+}
+
+.review-form p strong {
+  display: block; /* để xuống dòng */
+  margin-bottom: 15px; /* cách dưới "Your email address..." */
+}
+
+.review-form p {
+  margin-bottom: 15px; /* khoảng cách sau đoạn "Your email address..." */
+}
+
+.review-form label[for="review"] {
+  margin-top: 15px; /* cách trên review */
+  margin-bottom: 8px; /* nhãn gần textarea */
+  display: block;
+}
+
+.review-form label[for="name"],
+.review-form label[for="email"] {
+  margin-bottom: 6px; /* label gần input */
+}
+
+.review-form .stars {
+  margin-bottom: 15px; /* cách dưới sao */
+}
+
+.review-form textarea {
+  margin-bottom: 15px; /* cách dưới textarea */
+}
+
+.rating {
+  direction: rtl; /* hover từ trái sang phải */
+  unicode-bidi: bidi-override;
+  display: inline-flex;
+  display:block;
+}
+
+.rating input {
+  display: none; /* ẩn radio */
+}
+
+.rating label {
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+/* Hover */
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #d8c29c;
+}
+
+/* Khi chọn */
+.rating input:checked ~ label {
+  color: #d8c29c;
+}
+
+
+.related h2{
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Lato', 'Montserrat';
+    padding: 0px 0px 60px;
+}
+
+.related{
+    margin-bottom: 100px;
+}
+
+.related-title {
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Lato', 'Montserrat';
+    padding: 0px 0px 60px;
+    margin-bottom: 30px;
+    position: relative; /* để thêm gạch bên dưới */
+}
+
+.related-title::after {
+  content: "";
+  display: block;
+  width: 50px;                /* độ dài gạch */
+  height: 2px;                /* độ dày gạch */
+  background-color: #000;     /* màu gạch (có thể đổi thành #d8c29c nếu muốn nâu be) */
+  margin: 8px auto 0;         /* căn giữa và cách trên 8px */
+}
+
+
