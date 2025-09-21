@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header-top.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header class="top-header">
+        <div class="container">
+                <!-- Logo -->
+                <div class="logo">
+                <a href="homepage.html"><img src="images/header/Swiss-Logo.png" alt="Swiss Eagle"></a>
+                </div>
+
+                <!-- Menu icons -->
+                <div class="header-icons">
+                    <a href="#" class="icon">
+                        <img src="images/header/search.png" alt="Search">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="images/header/customer.png" alt="User">
+                    </a>
+
+                    <!-- Cart with dropdown -->
+                    <!-- Cart icon -->
+                    <div class="icon cart">
+                        <img src="images/header/cart.png" alt="Cart">
+                        <span class="cart-count">0</span>
+                    </div>
+                    <span class="cart-total">$0.00</span>
+
+                    <!-- Dropdown cart (đưa ra ngoài .icon.cart) -->
+                    <div class="cart-dropdown">
+                        <ul class="cart-items">
+                            <li class="cart-item">
+                            <div class="item-thumb">
+                                <img src="images/featured/1-1.jpg" alt="Gold Dial Number">
+                            </div>
+                            <div class="item-info">
+                                <p class="item-name">Gold Dial Number</p>
+                                <p class="item-qty">1 × $45.00</p>
+                            </div>
+                            <button class="remove">×</button>
+                            </li>
+
+                        </ul>
+
+                        <div class="cart-subtotal">
+                            <span>Subtotal:</span>
+                            <strong>$45.00</strong>
+                        </div>
+
+                        <div class="cart-actions">
+                            <a href="cart.html" class="btn">View Cart</a>
+                            <a href="checkout.html" class="btn">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- Page header -->
+    <div class="page-header">
+        <h1 class="page-title">CART</h1>
+        <nav class="breadcrumb">
+        <a href="homepage.html">Home</a>
+        <span class="separator">/</span>
+        <span>Cart</span>
+        </nav>
+    </div>
+
+    <main class="cart-page">
+        <!-- Cart Table -->
+        <section class="cart-container">
+            <table class="cart-table">
+                <thead>
+                <tr class="cart-title">
+                    <th class="cart-thumbnail">Product</th>
+                    <th class="cart-name"></th>
+                    <th class="cart-price">Price</th>
+                    <th class="cart-quantity">Quantity</th>
+                    <th class="cart-sub">Subtotal</th>
+                    <th class="cart-remove"></th>
+                </tr>
+                </thead>
+                <tbody id="cart-items"></tbody>
+            </table>
+
+            <div class="cart-action">
+                <button class="btn1">UPDATE CART</button>
+            </div>
+        </section>
+
+            <!-- Coupon -->
+        <section class="cart-coupon">
+            <div class="coupon-info">
+                <h3>Coupon:</h3>
+                <div class="coupon-box">
+                    <input type="text" placeholder="Coupon code">
+                    <button class="btn2">APPLY COUPON</button>
+                </div>
+            </div>
+        </section>
+
+            <!-- Cart Totals -->
+        <section class="cart-totals">
+            <div class="cart-info">
+                <h3>CART TOTALS</h3>
+                <div class="totals-row">
+                    <span class="label">Subtotal</span>
+                    <span class="value">$45.00</span>
+                </div>
+                <div class="totals-row total">
+                    <span class="label">Total</span>
+                    <span class="value">$45.00</span>
+                </div>
+                <button class="btn3">PROCEED TO CHECKOUT</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-logo">
+            <img src="images/footer/footer-logo.png" alt="Logo">
+        </div>
+        <div class="footer-top">
+            <div class="footer-col">
+            <h4>CONTACT US</h4>
+            <p><i class="fa fa-home"></i> 520, West valey, Anim ad minim,</p>
+            <p><i class="fa fa-phone"></i> +91 1234567890</p>
+            <p><i class="fa fa-envelope"></i> info@domainname.com</p>
+            </div>
+
+            <div class="footer-col">
+            <h4>SHARE WITH US</h4>
+            <p>Special offers on social networks</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/footer/icons/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="images/footer/icons/google.png" alt="google"></a>
+                <a href="#"><img src="images/footer/icons/instagram.png" alt="instagram"></a>
+                <a href="#"><img src="images/footer/icons/x.png" alt="twitter"></a>
+                
+            </div>
+            </div>
+
+            <div class="footer-col">
+            <h4>NEWSLETTER</h4>
+            <p>Subscribe our newsletter</p>
+            <form class="newsletter-form">
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Email Address" required>
+                    <!-- Nút submit với icon -->
+                    <button type="submit">
+                    <img src="images/footer/icons/mail.png" alt="Subscribe">
+                    </button>
+                </div>
+            </form>
+            </div>
+
+            <div class="footer-col">
+            <h4>#INSTAGRAM</h4>
+            <p>Our Instagram Gallery</p>
+            <div class="insta-gallery">
+                <img src="images/footer/gallery/gallery_1.jpg" alt="">
+                <img src="images/footer/gallery/gallery_2.jpg" alt="">
+                <img src="images/footer/gallery/gallery_3.jpg" alt="">
+                <img src="images/footer/gallery/gallery_4.jpg" alt="">
+                <img src="images/footer/gallery/gallery_5.jpg" alt="">
+                <img src="images/footer/gallery/gallery_6.jpg" alt="">
+            </div>
+            </div>
+        </div>
+
+        <div class="footer-quote">
+            Life is made up of two things Time and Love. Time is free but it is priceless.
+            You can’t own it but you can use it. You can’t keep it but you can spend it.
+            Once you have lost it you can never get it back. Love multiplies when you give it!
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © 2025, Swiss Eagle Powered by Designthemes</p>
+            <div class="payment-icons">
+            <img src="images/footer/payment-img.png" alt="Payment">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
